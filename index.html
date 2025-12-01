@@ -17,17 +17,20 @@
                 <li><a href="#projects">Projets</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="burger" role="button" aria-label="Ouvrir le menu">
+          
+
+            <button class="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false">
                 <div></div>
                 <div></div>
                 <div></div>
-            </div>
+            </button>
         </nav>
     </header>
 
     
     <section id="hero">
         <div class="hero-content">
+            <div class="hero-text">
                 <h1>Salut!, Je suis <span>Brandon Moukam</span></h1>
                 <p>Étudiant en 1ère année Informatique à l'UY1 · Développeur Web junior.</p>
                 <a href="#projects" class="btn">Voir mes projets</a>
@@ -42,13 +45,84 @@
     <section id="about">
         <h2>À propos de moi</h2>
         <p>Je suis un étudiant en informatique à l'UY1 passionné par le développement web, les nouvelles technologies, le basket-ball, et curieux de la cybersécurité et des intelligences artificielles. Mon objectif est de devenir un développeur compétent et polyvalent dans le développement web que dans le développement mobile.</p>
-        <p style="font-size: large; text-decoration: underline;"> Visualisation de ma certification : <a href="Certificat_Developpeur_Web_FINAL_Brandon.pdf" target="_blank" rel="noopener noreferrer">Cliquez ici pour voir ma certification.</a></p>
+        <button id="openCertBtn" class="btn cert-btn">Voir ma certification</button>
         <br>
-        <p style="color: bisque; text-align: center; text-decoration: underline;"><em>Compétences clés :</em></p>
+        
+        <div id="certModal" class="modal" aria-hidden="true">
+            <div class="modal-content" role="dialog" aria-modal="true" aria-label="Certification PDF">
+                <button class="modal-close" aria-label="Fermer la fenêtre">×</button>
+                <div class="modal-body">
+                    <iframe src="Certificat_Developpeur_Web_FINAL_Brandon.pdf" frameborder="0" aria-label="Certification PDF" allowfullscreen></iframe>
+                </div>
+                <div class="modal-fallback" id="certFallback" style="display:none;">
+                    <p>Impossible d'afficher le document ici. <a id="certOpenNew" href="Certificat_Developpeur_Web_FINAL_Brandon.pdf" target="_blank" rel="noopener">Ouvrir dans un nouvel onglet</a></p>
+                </div>
+            </div>
+        </div>
+        <p style="color: bisque; text-align: center; text-decoration: underline;"><em>Compétences Développeur web && Programmation :</em></p>
+        
+        <div class="skills-container">
+            <div class="skill-card">
+                <svg class="skill-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48">
+                    <path fill="#E34C26" d="M2 2h20v20H2z"/>
+                    <path fill="#FFFBF2" d="M6 10h3v3H6zM12 10h3v3h-3zM18 10h-2v3h2z"/>
+                </svg>
+                <h4>HTML5</h4>
+                <div class="skill-percentage">85%</div>
+            </div>
+
+            <div class="skill-card">
+                <svg class="skill-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48">
+                    <path fill="#1572B6" d="M2 2h20v20H2z"/>
+                    <path fill="#FFFBF2" d="M6 10h3v3H6zM12 10h3v3h-3zM18 10h-2v3h2z"/>
+                </svg>
+                <h4>CSS3</h4>
+                <div class="skill-percentage">80%</div>
+            </div>
+
+            <div class="skill-card">
+                <svg class="skill-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48">
+                    <path fill="#F7DF1E" d="M2 2h20v20H2z"/>
+                    <path fill="#000000" d="M6 10h3v3H6zM12 10h3v3h-3zM18 10h-2v3h2z"/>
+                </svg>
+                <h4>JavaScript</h4>
+                <div class="skill-percentage">60%</div>
+            </div>
+
+            <div class="skill-card">
+                <svg class="skill-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48">
+                    <path fill="#A8B9CC" d="M2 2h20v20H2z"/>
+                    <text x="12" y="18" font-size="14" font-weight="bold" fill="#000" text-anchor="middle">C</text>
+                </svg>
+                <h4>C</h4>
+                <div class="skill-percentage">65%</div>
+            </div>
+
+            <div class="skill-card">
+                <svg class="skill-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48">
+                    <path fill="#007396" d="M2 2h20v20H2z"/>
+                    <path fill="#FFFBF2" d="M6 10h3v3H6zM12 10h3v3h-3zM18 10h-2v3h2z"/>
+                </svg>
+                <h4>Java</h4>
+                <div class="skill-percentage">62%</div>
+            </div>
+
+            <div class="skill-card">
+                <svg class="skill-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48">
+                    <path fill="#3776AB" d="M2 2h20v20H2z"/>
+                    <path fill="#FFD43B" d="M6 10h3v3H6zM12 10h3v3h-3zM18 10h-2v3h2z"/>
+                </svg>
+                <h4>Python</h4>
+                <div class="skill-percentage">45%</div>
+            </div>
+        </div>
+
+        <p style="color: bisque; text-align: center; text-decoration: underline; margin-top: 40px;"><em>Autres compétences :</em></p>
         <ul>
-            <li>Développement web : HTML5, CSS3, JavaScript</li>
-            <li>Programmation : C (niveau intermédiaire), Java (niveau intermédiaire), Python (en cours d'acquisition)</li>
-            <li>Outils : Git, GitHub, Visual Studio Code</li>
+            <li>Frameworks && Bibliothèques : React, Node.js, Django </li>
+            <li>Outils : Git, GitHub, Visual Studio Code, ChatGpt</li>
+            <li>Langues : Français (natif), Anglais (intermédiaire)</li>
+            <li>Bases de Données : My SQL, SQLite</li>
         </ul>
     </section>
 
@@ -74,7 +148,7 @@
                 </div>
                 <div class="project-content">
                     <h3><em>Bot WhatsApp</em></h3>
-                    <p>Bot WhatsApp : assistant automatisé pour la messagerie, conçu pour faciliter la gestion de groupes sur WhatsApp, répondre automatiquement et exécuter des commandes personnalisées.</p>
+                    <p>Assistant automatisé pour la messagerie, conçu pour faciliter la gestion de groupes sur WhatsApp développé avec les technologies JavaScript, Node.js. Il répond automatiquement et exécuter des commandes personnalisées.</p>
                     <br>
                     <p>Lien vers le repository :<a href="https://gitHub.com/jujucram/brindi-bot">Cliquez ici</a></p>
                 </div>
@@ -85,7 +159,7 @@
                 </div>
                 <div class="project-content">
                     <h3>Site e-commerce - Boutique en ligne interactive</h3>
-                    <p>Plateforme de vente en ligne permettant aux utilisateurs de naviguer, rechercher et acheter des produits facilement, avec gestion de catalogue et paiement sécurisé.</p>
+                    <p>Plateforme de vente en ligne permettant aux utilisateurs de naviguer, rechercher et acheter des produits facilement , avec gestion de catalogue et paiement sécurisé.  Développé avec les technologies HTML5, CSS3, JavaScript.</p>
                 </div>
             </div>
         </div>
