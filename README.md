@@ -1,7 +1,7 @@
 # Brandon Moukam | Portfolio
 
 Bienvenue sur le portfolio en ligne de Brandon Moukam.  
-Étudiant en 1ʳᵉ année d’informatique, je suis passionné par le développement web et mobile, la cybersécurité, l’intelligence artificielle, et toujours avide d’apprendre.
+Étudiant en 1ʳᵉ année d’informatique, je suis passionné par le développement web et mobile, la cybersécurité, l’intelligence artificielle, et toujours envie d’apprendre.
 
 
 ## 🔍 À propos de moi
