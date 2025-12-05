@@ -1,3 +1,17 @@
+const modal = document.getElementById("don-modal");
+const btn = document.getElementById("don-btn");
+const closeDon = document.getElementById("close-don");
+const copyBtn = document.getElementById("copy-num");
+const num = document.getElementById("don-number").innerText;
+
+btn.onclick = () => modal.style.display = "flex";
+closeDon.onclick = () => modal.style.display = "none";
+
+copyBtn.onclick = () => {
+    navigator.clipboard.writeText(num);
+    copyBtn.innerText = "✔️ Copié !";
+    setTimeout(() => copyBtn.innerText = "📋 Copier le numéro", 2000);
+};
 const chatBtn = document.getElementById("chatbot-btn");
 const chatBox = document.getElementById("chatbot-box");
 const chatClose = document.getElementById("chatbot-close");
