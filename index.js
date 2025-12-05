@@ -1,4 +1,50 @@
+const chatBtn = document.getElementById("chatbot-btn");
+const chatBox = document.getElementById("chatbot-box");
+const chatClose = document.getElementById("chatbot-close");
+const sendBtn = document.getElementById("chatbot-send");
+const input = document.getElementById("chatbot-input");
+const messages = document.getElementById("chatbot-messages");
 
+chatBtn.onclick = () => chatBox.style.display = "flex";
+chatClose.onclick = () => chatBox.style.display = "none";
+
+function addMessage(text, sender) {
+    const msg = document.createElement("div");
+    msg.classList.add("message", sender);
+    msg.textContent = text;
+    messages.appendChild(msg);
+    messages.scrollTop = messages.scrollHeight;
+}
+
+function botReply(userText) {
+    let reply = "";
+
+    if (userText.includes("bonjour") || userText.includes("salut")) {
+        reply = "Salut 👋 ! Comment puis-je t’aider ?";
+    } else if (userText.includes("projet")) {
+        reply = "Tu peux voir mes projets dans la section 'Mes Projets' 😊";
+    } else if (userText.includes("contact")) {
+        reply = "Tu peux me contacter sur WhatsApp au +237 673 35 54 68 📱";
+    } else if (userText.includes("qui es tu") || userText.includes("présente toi")) {
+        reply = "Je suis BrandonBot, l’assistant virtuel du portfolio de Brandon.";
+    } else {
+        reply = "Je comprends pas encore cette demande 😅. Essaie avec : 'projet', 'contact', 'bonjour'...";
+    }
+
+    setTimeout(() => addMessage(reply, "bot"), 500);
+}
+
+sendBtn.onclick = () => {
+    const text = input.value.trim();
+    if (text === "") return;
+    addMessage(text, "user");
+    botReply(text.toLowerCase());
+    input.value = "";
+};
+
+input.addEventListener("keypress", e => {
+    if (e.key === "Enter") sendBtn.click();
+});
 const burger = document.querySelector('.burger');
 const nav = document.querySelector('.nav-links');
 
