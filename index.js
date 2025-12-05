@@ -30,7 +30,7 @@ function botReply(userText) {
     }else if (userText.includes("À propos de Brandon") || userText.includes("À propos")) {
         reply = "Tu peux voir la biographie de Brandon dans la section 'À propos'🔥.";
     }else {
-        reply = "Je comprends pas encore cette demande 😅. Essaie avec : 'projet', 'contact','À propos' , 'bonjour'...";
+        reply = "Je comprends pas encore cette demande 😅. Essaie avec : 'projet', 'contact', 'À propos' , 'bonjour'...";
     }
 
     setTimeout(() => addMessage(reply, "bot"), 500);
