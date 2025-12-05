@@ -27,8 +27,10 @@ function botReply(userText) {
         reply = "Tu peux me contacter sur WhatsApp au +237 673 35 54 68 📱";
     } else if (userText.includes("qui es tu") || userText.includes("présente toi")) {
         reply = "Je suis BrandonBot, l’assistant virtuel du portfolio de Brandon.";
-    } else {
-        reply = "Je comprends pas encore cette demande 😅. Essaie avec : 'projet', 'contact', 'bonjour'...";
+    }else if (userText.includes("À propos de Brandon") || userText.includes("À propos")) {
+        reply = "Tu peux voir la biographie de Brandon dans la section 'À propos'🔥.";
+    }else {
+        reply = "Je comprends pas encore cette demande 😅. Essaie avec : 'projet', 'contact','À propos' , 'bonjour'...";
     }
 
     setTimeout(() => addMessage(reply, "bot"), 500);
